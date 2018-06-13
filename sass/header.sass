@@ -10,24 +10,32 @@ body
 	font-family: "RobotoRegular", sans-serif
 	overflow-x: hidden
 
+a
+	color: #ECB124
+	outline: none
+
+
 .hidden
 	display: none
 
 .main-head
-	background-image: url("//3.jpg")
+	background-image: url(../img/3.jpg)
 	min-height: 100vh
-	background-size: cover;
-	background-position: center;
+	background-size: cover
+	background-position: center
 
 .mnu-line
 	padding-top: 48px
 
 	.logo
+
 		display: block
 		width: 100px
 		img
 			width: 100%
-naw
+naw,
+.header-content
+	padding: 9% 0
 	ul
 		list-style-type: none
 		paddind: 0
@@ -37,10 +45,72 @@ naw
 
 .main-mnu
 	text-align: center
+	font-size: 15px
 	> ul
 		> li
 			a
+				@extend .mt
 				display: block
 				padding: 10px 18px
+				&:hover
+					color: red
+
+.col-sm-6
+	margin-top: 0
+
+.phone
+	text-align: right
+	.phone-wrap
+		color: #46b8da
+		@extend .mt
+		font-family: "Exo2Bold", SansSerif
+		font-size: 22px
+		.fa
+			font-size: 24px
+	.callback
+		color: #46b8da
+	    border-bottom: #46b8da
+
+h1
+
+	line-height: 1.2
+
+h1
+		margin-top: 0
+
+.header-content
+	padding: 8% 0
+	ul
+		margin-top: 40px
+		li
+			display: block
+			color: #46b8da
+			text-transform: uppercase
+			font-family: "OpenSansSemiBold", SansSerif
+			font-size: 17px
+			line-height: 1.9
+
+.button
+	display: inline-block
+	border: none
+	background-color: greenyellow
+	color: #0E9C4B
+	font-size: 16px
+	letter-spacing: 4px
+	text-transform: uppercase
+	padding: 13px 34px
+	border-radius: 3px
+	box-shadow: 0 4px 0 #0E9C4B
+	transition: all .25s ease
+	&:hover, &:focus
+		color: #fff
+		text-decoration: none
+		&:hover
+			background-color: #18CB65
+		&:active
+			background-color: #0E9C4B
+
+
+
 
 
