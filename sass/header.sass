@@ -9,106 +9,134 @@ body
 	line-height: 1.6
 	font-family: "RobotoRegular", sans-serif
 	overflow-x: hidden
+	background-image: url("https://asoftmurmur.com/assets/img/bg-high-res.jpg")
 
-a
-	color: #ECB124
-	outline: none
+.header
+	display: block
+	background-image: url("https://asoftmurmur.com/assets/img/bg-high-res.jpg")
 
+.hat
+	background-color: rgba(0,0,0,.3)
+	width: 100%
+	height: 4.5rem
+	position: relative
+	opacity: 50%
 
-.hidden
-	display: none
+.Volume
+	position: relative
+	-webkit-appearance: none
+	margin-left: 2rem
+	max-width: 16rem
+	padding: 0.7%
 
-.main-head
-	background-image: url(../img/3.jpg)
-	min-height: 100vh
-	background-size: cover
-	background-position: center
+.VolumeSlider
+	position: relative
+	cursor: default
+	padding: initial
 
-.mnu-line
-	padding-top: 48px
-
-	.logo
-
-		display: block
-		width: 100px
-		img
-			width: 100%
-naw,
-.header-content
-	padding: 9% 0
-	ul
-		list-style-type: none
-		paddind: 0
-		margin: 0
-		li
-			display: inline-block
-
-.main-mnu
+.Volume .Mute
+	border: 2px solid #fff
+	border-radius: 5px
+	margin-top: -2.6rem
+	margin-left: 15rem
+	padding: 1px 10%
+	min-width: 4rem
 	text-align: center
-	font-size: 15px
-	> ul
-		> li
-			a
-				@extend .mt
-				display: block
-				padding: 10px 18px
-				&:hover
-					color: red
-
-.col-sm-6
-	margin-top: 0
-
-.phone
-	text-align: right
-	.phone-wrap
-		color: #46b8da
-		@extend .mt
-		font-family: "Exo2Bold", SansSerif
-		font-size: 22px
-		.fa
-			font-size: 24px
-	.callback
-		color: #46b8da
-	    border-bottom: #46b8da
-
-h1
-
-	line-height: 1.2
-
-h1
-		margin-top: 0
-
-.header-content
-	padding: 8% 0
-	ul
-		margin-top: 40px
-		li
-			display: block
-			color: #46b8da
-			text-transform: uppercase
-			font-family: "OpenSansSemiBold", SansSerif
-			font-size: 17px
-			line-height: 1.9
-
-.button
-	display: inline-block
-	border: none
-	background-color: greenyellow
-	color: #0E9C4B
-	font-size: 16px
-	letter-spacing: 4px
+	font-size: 1.1rem
+	background-color: #000000
+	color: #fff
 	text-transform: uppercase
-	padding: 13px 34px
-	border-radius: 3px
-	box-shadow: 0 4px 0 #0E9C4B
-	transition: all .25s ease
-	&:hover, &:focus
-		color: #fff
-		text-decoration: none
-		&:hover
-			background-color: #18CB65
-		&:active
-			background-color: #0E9C4B
+
+.Volume .Mute:hover
+	position: relative
+	transition: background .6s ease,color .6s ease
+	color: #FAFAFA
+
+.hat nav
+	align-items: center
+	max-width: 20rem
+
+	a
+		color: white
+		text-decoration: underline
+
+	a:hover
+		transition: background .3s ease,color .3s ease
+		color: #BDBDBD
+
+	a:visited
+		color: white
+
+.Title h1
+	font-family: Montserrat
+	color: #fff
+	font-size: 7rem
+	text-transform: uppercase
+	text-align: center
+
+.Title p
+	argin-top: .5rem
+	text-align: center
+	font-size: 16px
+	font-family: Montserrat
+	color: white
+
+.Play
+	cursor: pointer
+	width: 5rem
+	height: 5rem
+
+.Play .After
+	height: 5rem
+	width: 5rem
+	border-left: 4.5rem solid #fff
+	border-top: 2.5rem solid transparent
+	border-bottom: 2.5rem solid transparent
+	border-right: 0 solid #fff
+
+.Reset
+	height: 2.5rem
+	width: 2.5rem
+	min-height: 38px
+	min-width: 38px
+	font-size: .7rem
+	border: 2px solid #fff
+	-webkit-border-radius: 50%
+	border-radius: 50%
+	display: block
+	background-color: #0f0f0f
+
+.ButtonContents
+	width: 100%
+	height: 100%
+	align-items: center
+	position: relative
+
+.image
+	background-image: url(//24.ico)
+	/*background-position: -368px -400px*/
+	width: 24px
+	height: 24px
+
+/*.bottom
+	a
+		color: white
+		text-decoration: underline
+
+	a:hover
+		transition: background .3s ease,color .3s ease
+		color: #BDBDBD
+
+	a:visited
+		color: #ffffff */
+
+
+
+
+
+
+
+
 
 
 
