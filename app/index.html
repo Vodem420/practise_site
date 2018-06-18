@@ -20,6 +20,8 @@
 	<!-- Load Main CSS Compilled without JS -->
 	<noscript>
 		<link rel="stylesheet" href="_main.min.css">
+		<!--<link href="style.sass" rel="stylesheet">-->
+        <link rel="stylesheet" href="./libs/animate/css/style.css">
 	</noscript>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,30 +41,58 @@
 	<div class="hat">
 
 		<div class="Volume">
+			<!-- <button class="Mute">mute</button> -->
 			<span class="VolumeSlider">
 				<input min="0" max="1" step="0.01" class="slider" type="range">
-				<button class="Mute">mute</button>
+				<!-- <button class="Mute">mute</button> -->
 			</span>
-			<nav>
-				<a href="blog">Blog</a>
-				<a href="about">About</a>
-			</nav>
+			<button class="mute">mute</button>
 		</div>
+
+		<!-- <div class="Volume">
+			 <button class="Mute">mute</button>
+			<span class="VolumeSlider">
+				<input min="0" max="1" step="0.01" class="slider" type="range">
+				<!-- <button class="Mute">mute</button>
+			</span>
+			<!-- <button class="mute-2">mute</button>
+		</div> -->
+
+		<nav>
+			<a href="blog" class="blog">Blog</a>
+			<a href="about" class="about">About</a>
+		</nav>
 	</div>
 	<div class="Title">
 		<h1>a soft  murmur</h1>
 		<p>ambient sounds to wash  away distraction</p>
 	</div>
-	<button>
-	<div class="Play"></div>
-		<div class="After"></div>
-	</button>
-	<button class="Reset">
-		<span class="ButtonContents">
-			<span class="image"></span>
+    <div class="wraperr">
+	<div class="awe-wrapper">
+		<button>
+			<div class="animation-of-button"></div>
+			<div class="Play"></div>
+			<div class="After"></div>
+		</button>
+	</div>
+    </div>
+	<div class="reset">
+	<button class="Reset">Reset</button></div>
+	<div class="animations">
+<div class="container">
+		<div class="inner">
+			<div class="cloud"></div>
+				</div>
+			</div>
+		</div>
+	<div class="soundSlider">
+		<span>
+			<input type="range" min="0" max="1" step="0.02" value="0.6">
 		</span>
-	</button>
+	</div>
 
+</div>
+	</div>
 </div>
 
 <!-- <div class="bottom">

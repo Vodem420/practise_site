@@ -2,6 +2,11 @@
 @import fonts.sass
 @import vars.sass
 
+
+html *,
+html *:before,
+html *:after
+
 body
 	font-size: 16px
 	min-width: 320px
@@ -14,7 +19,6 @@ body
 .header
 	display: block
 	background-image: url("https://asoftmurmur.com/assets/img/bg-high-res.jpg")
-
 .hat
 	background-color: rgba(0,0,0,.3)
 	width: 100%
@@ -30,31 +34,41 @@ body
 	padding: 0.7%
 
 .VolumeSlider
+	width: 100%
+	margin: 11px 0
+	min-width: 3rem
 	position: relative
 	cursor: default
+	appearance: none
 	padding: initial
 
-.Volume .Mute
+.mute
+	display: inline-block
+	position: absolute
 	border: 2px solid #fff
 	border-radius: 5px
-	margin-top: -2.6rem
-	margin-left: 15rem
+	margin-left: 17rem
+	margin-top: -2.5rem
 	padding: 1px 10%
-	min-width: 4rem
+	min-width: 1rem
 	text-align: center
 	font-size: 1.1rem
 	background-color: #000000
 	color: #fff
 	text-transform: uppercase
 
-.Volume .Mute:hover
-	position: relative
+.mute:hover
 	transition: background .6s ease,color .6s ease
-	color: #FAFAFA
+	color: black
+	background: white
 
-.hat nav
+nav
 	align-items: center
-	max-width: 20rem
+	max-width: 15rem
+	padding: .1%
+	float: right
+	margin-top: -4.5rem
+	font-size: 20px
 
 	a
 		color: white
@@ -67,6 +81,15 @@ body
 	a:visited
 		color: white
 
+.blog
+	margin-top: 5rem
+	margin-right: 3rem
+
+.about
+	margin-top: 5rem
+	margin-right: 1rem
+
+
 .Title h1
 	font-family: Montserrat
 	color: #fff
@@ -75,18 +98,20 @@ body
 	text-align: center
 
 .Title p
-	argin-top: .5rem
+	margin-top: -5rem
 	text-align: center
 	font-size: 16px
 	font-family: Montserrat
 	color: white
 
-.Play
-	cursor: pointer
-	width: 5rem
-	height: 5rem
+.awe-wrapper
+	button
+		display: flex
+		margin: auto
 
-.Play .After
+	.awe-wrapper .animation-of-button .Play
+	display: flex
+	margin: auto
 	height: 5rem
 	width: 5rem
 	border-left: 4.5rem solid #fff
@@ -94,29 +119,64 @@ body
 	border-bottom: 2.5rem solid transparent
 	border-right: 0 solid #fff
 
+	.awe-wrapper .animation-of-button .After
+		display: flex
+		margin: auto
+		transition: border .15s linear,opacity .1s ease
+
+.wraperr
+	padding: 2rem
+
+.reset
+	padding: 2rem
+
 .Reset
-	height: 2.5rem
-	width: 2.5rem
-	min-height: 38px
-	min-width: 38px
-	font-size: .7rem
+	padding: 2rem 2rem
+	min-width: 2rem
+	min-height: 2rem
+	display: flex
+	margin: auto
+	font-size: 1rem
 	border: 2px solid #fff
-	-webkit-border-radius: 50%
 	border-radius: 50%
-	display: block
 	background-color: #0f0f0f
+	text-transform: uppercase
+	text-align: center
+	font-family: Montserrat
+	color: #ffffff
 
-.ButtonContents
-	width: 100%
-	height: 100%
-	align-items: center
+.Reset:hover
+	transition: background .3s ease,color .3s ease
+	background: #FF1744
+	border: 2px solid black
+
+.container0
+	float: left
 	position: relative
+	height: 230px
+	width: 250px
+	display: flex
+	justify-content: center
+	align-items: center
 
-.image
-	background-image: url(//24.ico)
-	/*background-position: -368px -400px*/
-	width: 24px
-	height: 24px
+.container0 .inner
+	width: 150px
+	height: 180px
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.soundSlider
+	display: flex
+	flex: 1
+	flex-direction: column
+	justify-content: flex-end
+	width: 100px
+	.soundSlider
+		span
+			display: block
+
+
 
 /*.bottom
 	a
