@@ -22,6 +22,7 @@
 		<link rel="stylesheet" href="_main.min.css">
 		<!--<link href="style.sass" rel="stylesheet">-->
         <link rel="stylesheet" href="./libs/animate/css/style.css">
+		<script src="./libs/animate/js/animation.js"></script>
 	</noscript>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,14 +37,14 @@
 
 <body>
 
-<div class="header">
+<header class="header">
 
 	<div class="hat">
 
 		<div class="Volume">
 			<!-- <button class="Mute">mute</button> -->
 			<span class="VolumeSlider">
-				<input min="0" max="1" step="0.01" class="slider" type="range">
+				<input class="volume_slider" min="0" max="1" step="0.01" class="slider" type="range">
 				<!-- <button class="Mute">mute</button> -->
 			</span>
 			<button class="mute">mute</button>
@@ -59,48 +60,172 @@
 		</div> -->
 
 		<nav>
-			<a href="blog" class="blog">Blog</a>
+			<a href="index2.html" class="blog">Blog</a>
 			<a href="about" class="about">About</a>
 		</nav>
 	</div>
 	<div class="Title">
-		<h1>a soft  murmur</h1>
-		<p>ambient sounds to wash  away distraction</p>
+		<h1>a soft murmur</h1>
+		<p>ambient sounds to wash away distraction</p>
 	</div>
-    <div class="wraperr">
-	<div class="awe-wrapper">
-		<button>
-			<div class="animation-of-button"></div>
-			<div class="Play"></div>
-			<div class="After"></div>
-		</button>
+	<div class="wrap">
+		<button id="animated-btn" class="animation-of-button">Play</button>
 	</div>
-    </div>
 	<div class="reset">
-	<button class="Reset">Reset</button></div>
-	<div class="animations">
-<div class="container">
-		<div class="inner">
-			<div class="cloud"></div>
+		<button class="Reset">Reset</button>
+	<!--</div>-->
+	<!--&lt;!&ndash; <div class="animations">-->
+		<!--&lt;!&ndash;<div class="container0">&ndash;&gt;-->
+		<!--&lt;!&ndash;<div class="inner">&ndash;&gt;-->
+		<!--&lt;!&ndash;<div class="cloud">&ndash;&gt;-->
+		<!--&lt;!&ndash;<img src="img/icons/climacons-master/SVG/Cloud-Rain.svg" height="250px" width="250px">&ndash;&gt;-->
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+		<!--&lt;!&ndash;<div class="soundSlider">&ndash;&gt;-->
+		<!--&lt;!&ndash;<span>&ndash;&gt;-->
+		<!--&lt;!&ndash;<input type="range" min="0" max="1" step="0.02" value="0.6">&ndash;&gt;-->
+		<!--&lt;!&ndash;</span>&ndash;&gt;-->
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+	</div>
+</header>
+
+<section>
+	<div class="music-container">
+
+		<div class="music-item">
+			<div class="music-icon">
+				<span class="icon-Cloud-Drizzle-Moon"></span>
+			</div>
+			<div class="music-title">
+				Rain
+			</div>
+			<div class="music-volume">
+				<input class="volume_slider" min="0" max="1" step="0.01" class="slider" type="range">
+				<div class="music-audio">
+					<audio preload="auto" loop="loop">
+						<source src="music/rain.ogg">
+					</audio>
 				</div>
 			</div>
 		</div>
-	<div class="soundSlider">
-		<span>
-			<input type="range" min="0" max="1" step="0.02" value="0.6">
-		</span>
-	</div>
 
-</div>
-	</div>
-</div>
+		<div class="music-item">
+			<div class="music-icon">
+				<span class="icon-Cloud-Lightning"></span>
+			</div>
+			<div class="music-title">
+				Thunder
+			</div>
+			<div class="music-volume">
+				<input class="volume_slider" min="0" max="1" step="0.01" class="slider" type="range">
+				<div class="music-audio">
+					<audio preload="auto" loop="loop">
+						<source src="music/thunder.mp4">
+					</audio>
+				</div>
+			</div>
+		</div>
 
-<!-- <div class="bottom">
-	<a href="Policy">Privacy Policy</a>
-	<a href="Terms of use">Terms of use</a>
-	<a href="Iphone app">Iphone app</a>
-	<a href="Android app">Android app</a>
-</div> -->
+		<div class="music-item">
+			<div class="music-icon">
+				<span class="icon-Wind"></span>
+			</div>
+			<div class="music-title">
+				Wind
+			</div>
+			<div class="music-volume">
+				<input id="first-audio" class="volume_slider" min="0" max="1" step="0.01" class="slider"
+					   type="range">
+				<div class="music-audio">
+					<audio preload="auto" loop="loop">
+						<source src="music/wind.mp4">
+					</audio>
+				</div>
+			</div>
+		</div>
+
+		<div class="music-item">
+			<div class="music-icon">
+				<span class="icon-Sun"></span>
+			</div>
+			<div class="music-title">
+				Sunrise
+			</div>
+			<div class="music-volume">
+				<input class="volume_slider" min="0" max="1" step="0.01" class="slider" type="range">
+				<div class="music-audio">
+					<audio preload="auto" loop="loop">
+						<source src="music/sun-rise.mp3">
+					</audio>
+				</div>
+			</div>
+		</div>
+
+		<div class="music-item">
+			<div class="music-icon">
+				<span class="icon-Sunset"></span>
+			</div>
+			<div class="music-title">
+				Sunset
+			</div>
+			<div class="music-volume">
+				<input class="volume_slider" min="0" max="1" step="0.01" class="slider" type="range">
+				<div class="music-audio">
+					<audio preload="auto" loop="loop">
+						<source src="music/crickets.mp4">
+					</audio>
+				</div>
+			</div>
+		</div>
+
+		<div class="music-item">
+			<div class="music-icon">
+				<span class="icon-Cloud-Rain"></span>
+			</div>
+			<div class="music-title">
+				Heavy Rain
+			</div>
+			<div class="music-volume">
+				<input class="volume_slider" min="0" max="1" step="0.01" class="slider" type="range">
+				<div class="music-audio">
+					<audio preload="auto" loop="loop">
+						<source src="music/heavy-rain.mp4">
+					</audio>
+				</div>
+			</div>
+		</div>
+
+		<div class="music-item">
+			<div class="music-icon">
+				<span class="icon-Tornado"></span>
+			</div>
+			<div class="music-title">
+				Tornado
+			</div>
+			<div class="music-volume">
+				<input class="volume_slider" min="0" max="1" step="0.01" class="slider" type="range"></div>
+			<div class="music-audio">
+				<audio preload="auto" loop="loop">
+					<source src="music/hurricane.mp3">
+				</audio>
+			</div>
+			<!--	</div> -->
+		</div>
+
+	</div>
+</section>
+
+<footer>
+	<div class="bottom">
+		<a href="Policy">Privacy Policy</a>
+		<a href="Terms of use">Terms of use</a>
+		<a href="Iphone app">Iphone app</a>
+		<a href="Android app">Android app</a>
+	</div>
+</footer>
+
 
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>

@@ -3,22 +3,23 @@
 @import vars.sass
 
 
-html *,
-html *:before,
-html *:after
 
 body
 	font-size: 16px
 	min-width: 320px
 	position: relative
 	line-height: 1.6
-	font-family: "RobotoRegular", sans-serif
+	font-family: "RobotoRegular", sans-serif, "Montserrat"
 	overflow-x: hidden
 	background-image: url("https://asoftmurmur.com/assets/img/bg-high-res.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	color: $main-color
 
 .header
 	display: block
-	background-image: url("https://asoftmurmur.com/assets/img/bg-high-res.jpg")
+	//background-image: url("https://asoftmurmur.com/assets/img/bg-high-res.jpg")
+	//background-size: cover
 .hat
 	background-color: rgba(0,0,0,.3)
 	width: 100%
@@ -33,21 +34,32 @@ body
 	max-width: 16rem
 	padding: 0.7%
 
-.VolumeSlider
+/*.VolumeSlider
 	width: 100%
 	margin: 11px 0
 	min-width: 3rem
 	position: relative
 	cursor: default
-	appearance: none
-	padding: initial
+	//appearance: none
+	padding: initial*/
+
+.volume_slider
+	-webkit-appearance: none
+	border-radius: 2px
+	width: 150px
+	height: 5px
+	outline: none
+	border: 1px solid greenyellow
+	background: greenyellow
+	value: 10
+
 
 .mute
 	display: inline-block
 	position: absolute
 	border: 2px solid #fff
 	border-radius: 5px
-	margin-left: 17rem
+	margin-left: 20rem
 	margin-top: -2.5rem
 	padding: 1px 10%
 	min-width: 1rem
@@ -56,12 +68,23 @@ body
 	background-color: #000000
 	color: #fff
 	text-transform: uppercase
+	outline: 0
+	outline-offset: 0
 
 .mute:hover
 	transition: background .6s ease,color .6s ease
 	color: black
 	background: white
+	outline: 0
+	outline-offset: 0
 
+.blog
+	margin-top: 5rem
+	margin-right: 3rem
+
+.about
+	margin-top: 5rem
+	margin-right: 1rem
 nav
 	align-items: center
 	max-width: 15rem
@@ -81,52 +104,70 @@ nav
 	a:visited
 		color: white
 
-.blog
-	margin-top: 5rem
-	margin-right: 3rem
-
-.about
-	margin-top: 5rem
-	margin-right: 1rem
 
 
 .Title h1
-	font-family: Montserrat
 	color: #fff
-	font-size: 7rem
+	font-size: 6rem
 	text-transform: uppercase
 	text-align: center
 
 .Title p
 	margin-top: -5rem
 	text-align: center
-	font-size: 16px
-	font-family: Montserrat
+	font-size: 3rem
 	color: white
 
-.awe-wrapper
-	button
-		display: flex
-		margin: auto
-
-	.awe-wrapper .animation-of-button .Play
+.wrap
+	padding: 4rem 0 2rem
 	display: flex
+	margin-left: auto
+	margin-right: auto
+
+.animation-of-button
+	padding: 5px 30px
+	min-width: 9rem
+	min-height: 9rem
+	display: flex
+	font-size: 3rem
+	color: white
+	border: 2px solid #fff
+	border-radius: 15px
+	background-color: black
+	text-transform: uppercase
+	text-align: center
+	outline: 0
+	outline-offset: 0
+
 	margin: auto
-	height: 5rem
-	width: 5rem
-	border-left: 4.5rem solid #fff
-	border-top: 2.5rem solid transparent
-	border-bottom: 2.5rem solid transparent
-	border-right: 0 solid #fff
 
-	.awe-wrapper .animation-of-button .After
-		display: flex
-		margin: auto
-		transition: border .15s linear,opacity .1s ease
+.animation-of-button:hover
+	transition: background .3s ease,color .3s ease
+	font-size: 3rem
+	background: #9e9e9e
+	border: 2px solid black
+	outline: 0
+	outline-offset: 0
 
-.wraperr
-	padding: 2rem
 
+
+@keyframes button_animation
+	50%
+		background: #9e9e9e
+	100%
+		background: #eeeeee
+		border: 2px solid black
+
+.button_animation
+	animation: 3s ease button_animation infinite
+	color: black
+	outline: 0
+	outline-offset: 0
+.animation-of-button:after
+	button
+		animation: move 3s infinite linear
+		outline: 0
+		outline-offset: 0
 .reset
 	padding: 2rem
 
@@ -142,41 +183,81 @@ nav
 	background-color: #0f0f0f
 	text-transform: uppercase
 	text-align: center
-	font-family: Montserrat
 	color: #ffffff
+	outline: 0
+	outline-offset: 0
 
 .Reset:hover
 	transition: background .3s ease,color .3s ease
 	background: #FF1744
 	border: 2px solid black
+	outline: 0
+	outline-offset: 0
 
-.container0
+/*.container0
 	float: left
 	position: relative
 	height: 230px
 	width: 250px
 	display: flex
 	justify-content: center
-	align-items: center
+	align-items: center*/
 
-.container0 .inner
+/*.container0 .inner
 	width: 150px
 	height: 180px
 	display: flex
 	flex-direction: column
-	align-items: center
+	align-items: center*/
 
-.soundSlider
+/*.soundSlider
 	display: flex
+	float: left
 	flex: 1
 	flex-direction: column
 	justify-content: flex-end
 	width: 100px
 	.soundSlider
 		span
-			display: block
+			display: block*/
+
+.page-2
+	a
+		color: red
 
 
+.music-icon
+	display: flex
+	position: relative
+	color: #00ccff
+	font-size: 260px
+
+.music-item
+	display: flex
+	position: relative
+	color: red
+	width: 260px
+
+.bottom
+	text-align: center
+	margin-bottom: 2rem
+	a
+		color: white
+		max-width: 15rem
+		padding: 1rem
+
+	a:hover
+		transition: background .3s ease,color .3s ease
+		color: #BDBDBD
+
+
+//.music-audio
+//	position: relative
+//	audio
+//		position: absolute
+//		opacity: 0
+//		width: 0
+//		height: 0
 
 /*.bottom
 	a
