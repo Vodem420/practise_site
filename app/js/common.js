@@ -72,53 +72,30 @@ $(function() {
 		audio.volume = input.val();
 	});
 
+    // $("#mute").click(function() {
+    //     $(".all_sounds").each(function() {
+    //         var input = $(this);
+    //         input.val(0);
+    //         var audio = $(this).next().find("audio")[0];
+    //         audio.volume = 0;
+    //
+    //     })
+    //
+    //
+    // });
+
     $("#mute").click(function() {
         $(".all_sounds").each(function() {
             var input = $(this);
             input.val(0);
-
             var audio = $(this).next().find("audio")[0];
             audio.volume = 0;
-
         })
+
+
     });
-    // document.getElementById("mute").onclick = function() {
-     //    var animated_btn = document.getElementById("animated-btn");
-     //    if(animated_btn.paused == true) {
-     //        document.getElementById("animated_btn").play();
-     //    }
-     //    else if (animated_btn.paused == false) {
-     //        document.getElementById("animated_btn").pause();
-     //    }
-     //    this.style.backgroundColor = "White";
-     //    this.style.color = "Black";
-	// }
 
 
 
-    /*
-        var music = $('#main_audio')[0];
-        var players = [];
-
-        var radioEfir = 'http://m11m128.hostingradio.ru:8074/m11m128.mp3';
-        var audioPlayer = $('#main_audio');
-
-        $( ".header-wrap" ).on( "click", ".radio-button", function playAudio() {
-            $(this).closest('.radio-block').toggleClass('active');
-            if C {
-                $(audioPlayer).attr('src', radioEfir);
-                music.play();
-
-                // TODO check if players provided are not undefined
-                $.each(players, function(i,val){
-                    this.pauseVideo();
-                });
-
-            } else {
-                $(audioPlayer).attr('src', '');
-                music.pause();
-            }
-        });
-       */
 
 });
