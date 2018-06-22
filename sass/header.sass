@@ -20,21 +20,23 @@ body
   display: block
 
 .hat
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
   background-color: rgba(0,0,0,.3)
   width: 100%
   height: 4.5rem
   position: relative
   opacity: 50%
+  min-width: 900px
 
-.Volume
+.volume
   position: relative
-  -webkit-appearance: none
   margin-left: 2rem
   max-width: 16rem
   padding: 0.7%
 
 .volume_slider
-  -webkit-appearance: none
   border-radius: 2px
   width: 150px
   height: 5px
@@ -44,7 +46,6 @@ body
   value: 10
 
 input[type=range]::-webkit-slider-thumb
-  -webkit-appearance: none
   border: 1px solid #000000
   height: 25px
   width: 16px
@@ -57,7 +58,6 @@ input[type=range]::-webkit-slider-thumb
 
 .mute
   display: inline-block
-  position: absolute
   border: 2px solid #fff
   border-radius: 5px
   margin-left: 0.5rem
@@ -79,29 +79,17 @@ input[type=range]::-webkit-slider-thumb
   outline: 0
   outline-offset: 0
 
-.blog
-  position: relative
-  margin-top: 5rem
-  margin-right: 3rem
-  z-index: 10
-
-.about
-  position: relative
-  margin-top: 5rem
-  margin-right: 1rem
-  z-index: 10
 
 nav
   align-items: center
-  max-width: 15rem
+  //max-width: 15rem
   padding: .1%
-  float: right
-  margin-top: -18.5rem
   font-size: 20px
 
   a
     color: white
     text-decoration: underline
+    margin: 0 1rem
 
   a:hover
     transition: background .3s ease,color .3s ease
@@ -110,6 +98,17 @@ nav
   a:visited
     color: white
 
+.blog
+  //position: relative
+  //margin-top: 5rem
+  //margin-right: 3rem
+  z-index: 10
+
+.about
+  //position: relative
+  //margin-top: 5rem
+  //margin-right: 1rem
+  z-index: 10
 
 @keyframes bounce_blurringTextG
   0%
@@ -125,10 +124,6 @@ nav
 ////////////////////////////////////
 .content
   position: relative
-  top: 120%
-  left: 92%
-  transform: translate(-50%, -50%)
-  //width: 500px
   height: 160px
   overflow: hidden
   font-family: 'Lato', sans-serif
@@ -156,6 +151,8 @@ nav
       animation-duration: 30s
       animation-iteration-count: infinite
 
+  @media (max-width: 620px)
+    display: none
 @-webkit-keyframes opacity
   0%, 100%
     opacity: 0
@@ -268,6 +265,13 @@ nav
 //////////////
 /*SECOND SITE*/
 //////////////
+.page-2
+  .hat
+    nav
+      width: 100%
+      display: flex
+      justify-content: space-between
+
 .hat2
   background-color: rgba(0,0,0,.3)
   width: 100%
@@ -289,8 +293,7 @@ nav
   text-decoration: none
 
 .about1
-  a
-  position: absolute
+  position: relative
   color: white
   margin-left: 180rem
   margin-top: -1.5rem
@@ -305,6 +308,7 @@ nav
 #title
   text-align: center
   font-size: 4rem
+  min-width: 900px
 
 .information
   width: 900px
@@ -314,6 +318,7 @@ nav
   padding: 2rem
   display: block
   color: black
+  min-width: 900px
 
 #copyright
   justify-content: flex-end
@@ -322,6 +327,7 @@ nav
   text-align: center
   margin-top: 53rem
   padding: 2rem
+  min-width: 900px
 
 //////////////
 /*THIRD SITE*/
@@ -365,8 +371,11 @@ nav
 
 .music-container
   display: flex
+  flex-wrap: wrap
+  justify-content: space-around
   padding: 2rem
   text-align: center
+
 
 .music-icon
   display: flex
@@ -377,23 +386,12 @@ nav
 .music-item
   color: #FFB300
   width: 260px
-    position: relative
+  position: relative
 
-//.bottom
-//	a
-//
-//	  color: white
-//	  max-width: 15rem
-//	  padding: 1rem
-//
-//	a:hover
-//	  transition: background .3s ease,color .3s ease
-//	  color: #BDBDBD
 
 #bot
   text-align: center
   position: relative
-  bottom: -100px
   a
     font-size: 2rem
     color: white
@@ -408,11 +406,16 @@ nav
       margin-right: 20px
 
 .back
-  a
   position: relative
   text-align: center
-  color: yellow
+  color: white
   font-size: 2rem
+  text-decoration: none
+.back:hover
+  color: gray
+  transition: background .3s ease, color .3s ease
+  text-decoration: none
+
 
 
 
